@@ -1,0 +1,93 @@
+#body {
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+}
+
+#header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#titulo {
+    color:black;
+}
+
+#button_control {
+    height: 100px;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.buttons-button_control {
+    height: 30px;
+    width: auto;
+    border-radius: 10px;
+    margin-left: 17%;
+    background-color: bisque;
+}
+
+#main {
+    margin-top: 50px;
+}
+
+#table-main-1 {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#table-main-1 td {
+    vertical-align: middle;
+}
+
+.th_table_main-1 {
+    border: 1px solid #000000;
+    background-color: rgb(161, 161, 161);
+    text-align: left;
+    padding: 8px;
+}
+
+.th_table_main_newCells {
+    border: 1px solid #000000;
+    background-color: rgb(180, 180, 180);
+    text-align: left;
+    padding: 8px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.th_table_main_newCells_input {
+    border-color: transparent;
+    background-color: rgb(180, 180, 180);
+    text-align: right;
+    padding: 8px;
+    height: 30px;
+    width: 155px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.th_table_main_newCells_input_sign {
+    border: 1px solid #000000;
+    background: rgb(171, 98, 98);
+    padding-left: 25px;
+    background-size: 100% 100%;
+}
+
+.th_table_main_newCells_input_duracao {
+    border: 1px solid #000000;
+    background-color: rgb(180, 180, 180);
+    text-align: left;
+    padding: 8px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+}
