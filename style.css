@@ -1,7 +1,8 @@
 #body {
     height: 100vh;
     width: 100%;
-    background-color: gray;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
 }
 
 #header {
@@ -49,7 +50,7 @@
 
 .th_table_main-1 {
     border: 1px solid #000000;
-    background-color: rgb(161, 161, 161);
+    background-color: transparent;
     text-align: left;
     padding: 8px;
 }
@@ -64,30 +65,36 @@
     white-space: nowrap;
 }
 
-.th_table_main_newCells_input {
+.th_table_main_newCells_inputValor {
     border-color: transparent;
     background-color: rgb(180, 180, 180);
     text-align: right;
     padding: 8px;
     height: 30px;
-    width: 155px;
+    width: 130px;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.th_table_main_newCells_input_sign {
-    border: 1px solid #000000;
-    background: rgb(171, 98, 98);
-    padding-left: 25px;
-    background-size: 100% 100%;
+.th_table_main_newCells_label {
+    border-color: transparent;
+    color:#000000;
+    background-color: rgb(180, 180, 180);
+    text-align: right;
+    padding: 5px;
+    height: 30px;
+    width: 15px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .th_table_main_newCells_input_duracao {
-    border: 1px solid #000000;
+    border-color: transparent;
     background-color: rgb(180, 180, 180);
-    text-align: left;
+    text-align: right;
     padding: 8px;
     height: 30px;
+    width: 160px;
     overflow: hidden;
     white-space: nowrap;
 }

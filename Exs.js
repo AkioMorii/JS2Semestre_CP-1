@@ -31,10 +31,26 @@ const table = document.getElementById("table-main-1");
 const arrayobjectTable_main = []
 function adicionar_tarefaButton() {
     const descricao = prompt("Digite a descrição da tarefa que deseja adicionar:");
+    if(descricao==null){
+        return;
+    }
+    if(descricao==""){
+        alert('Digite uma descrição');
+         return;
+    }
     const autor = prompt("Digite o nome do autor:");
+    if(autor==null){return}
     const departamento = prompt("Digite o departamento:");
-    const importancia = prompt("Digite o grau de importância com numeros de 1 á 5, onde 1 é MUITO importante:");
-
+    if(departamento==null){return}
+    const importancia = prompt("Digite o grau de importância com numeros de 1 á 5, onde 1 é MUITO importante e 0 não:");
+    if(importancia==null){return}
+    if (isNaN(importancia)){
+       alert('Digite um número entre 0 e 5')
+       return false;
+    }else if(importancia < 0 || importancia >5){
+        alert('Digite um número entre 0 e 5')
+        return false;
+    }
     const objectTable_main = {
         descricao: descricao,
         autor: autor,
@@ -75,20 +91,24 @@ function atualizarTarefas(){
         const valorCell = newRow.insertCell();
         const valorInput = document.createElement('input');
         valorInput.type = 'text';
+        labelvalor = document.createElement('span')
+        labelvalor.innerHTML = 'R$'
         valorInput.value = tarefa.valor;
-        valorInput.classList.add('th_table_main_newCells_input');
+        valorInput.classList.add('th_table_main_newCells_inputValor');
+        labelvalor.classList.add('th_table_main_newCells_label');
         valorInput.addEventListener('input', (event) => atualizarValor(index, event.target.value));
+        valorCell.appendChild(labelvalor);
         valorCell.appendChild(valorInput);
-        valorCell.classList.add('th_table_main_newCells_input_sign');
+        valorCell.classList.add('th_table_main_newCells');
 
         const duracaoCell = newRow.insertCell();
         const duracaoInput = document.createElement('input');
         duracaoInput.type = 'text';
         duracaoInput.value = tarefa.duracao;
-        duracaoInput.classList.add('th_table_main_newCells_input');
+        duracaoInput.classList.add('th_table_main_newCells_input_duracao');
         duracaoInput.addEventListener('input', (event) => atualizarDuracao(index, event.target.value));
         duracaoCell.appendChild(duracaoInput);
-        duracaoCell.classList.add('th_table_main_newCells_input_duracao');
+        duracaoCell.classList.add('th_table_main_newCells');
 
         const concluidaCell = newRow.insertCell();
         const checkbox = document.createElement('input');
